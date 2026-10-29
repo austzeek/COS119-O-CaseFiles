@@ -14,6 +14,7 @@ void Game::ShowTitle() const
     std::cout << "====================================\n\n";
 
     std::cout << "A high ranking Agent was found murdered...\n\n";
+    std::cout << "It's up to you find the killer...\n\n";
 }
 
 void Game::ShowMenu() const
@@ -85,11 +86,11 @@ void Game::ShowSuspects() const
     std::cout << "   Occupation: " << suspect3.GetOccupation() << "\n";
     std::cout << "   Alibi: " << suspect3.GetAlibi() << "\n\n";
 
-    std::cout << "4. " << suspect3.GetName() << "\n";
-    std::cout << "   Occupation: " << suspect3.GetOccupation() << "\n";
-    std::cout << "   Alibi: " << suspect3.GetAlibi() << "\n\n";
+    std::cout << "4. " << suspect4.GetName() << "\n";
+    std::cout << "   Occupation: " << suspect4.GetOccupation() << "\n";
+    std::cout << "   Alibi: " << suspect4.GetAlibi() << "\n\n";
 
-    std::cout << "5. " << suspect3.GetName() << "\n";
-    std::cout << "   Occupation: " << suspect3.GetOccupation() << "\n";
-    std::cout << "   Alibi: " << suspect3.GetAlibi() << "\n\n";
+    std::cout << "5. " << suspect5.GetName() << "\n";
+    std::cout << "   Occupation: " << suspect5.GetOccupation() << "\n";
+    std::cout << "   Alibi: " << suspect5.GetAlibi() << "\n\n";
 }
