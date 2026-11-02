@@ -200,11 +200,13 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Evidence.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Suspect.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Evidence.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Suspect.h" />
   </ItemGroup>
