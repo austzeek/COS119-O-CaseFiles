@@ -52,7 +52,20 @@ My next focus is to make the investigation more interactive by connecting discov
 
 Week 3
 
-My next stand-up will go here.
+Overview:
+This week, I haven’t made any major changes to Five Faces of Evil. I’m getting pretty close to completing the project, and most of the foundation and core functionality are already in place. At this stage, I’m taking a step back to look at what I’ve accomplished so far and consider what still needs attention before calling the project complete.
+
+Improvements:
+Throughout development, I’ve been able to build out the main menu, investigation system, suspect interactions, and evidence mechanics. One of my main goals has been keeping the different systems organized and giving each part of the game its own purpose. I’m happy with how the project has come together so far, especially considering how much the original idea has developed since I started.
+
+Challenges:
+One challenge I’ve run into is knowing when to stop adding new ideas and focus on finishing the project. There are always additional features or details I’d like to experiment with, but I also recognize the importance of staying within scope. I’d rather have a finished project where everything works together than continue adding features that aren’t necessary.
+
+Feedback:
+I’ve been keeping the feedback and suggestions I’ve received throughout development in mind. It’s been helpful to consider different perspectives and think about how someone other than myself might experience the game. I want to make sure the final result is enjoyable and that the investigation mechanics are easy to follow.
+
+Next Steps:
+My main goal for Week 4 is to focus on wrapping up the project. I want to revisit the existing systems, test the functionality, address any remaining issues, and make sure everything works together as intended. At this point, my priority is polishing what I’ve already built rather than expanding the project with additional features. 
 
 Week 4
 
