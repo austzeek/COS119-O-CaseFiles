@@ -1,9 +1,28 @@
 #include "Game.h"
 #include <iostream>
-#include <limits>
 #include <windows.h>
 
 using namespace std;
+
+// Reusable menu input validation
+int Game::GetMenuChoice() const
+{
+    int choice = 0;
+
+    if (!(cin >> choice))
+    {
+        cin.clear();
+        cin.ignore(10000, '\n');
+
+        cout << "\nInvalid input. Enter a number.\n";
+
+        return -1;
+    }
+
+    cin.ignore(10000, '\n');
+
+    return choice;
+}
 
 void Game::Run()
 {
@@ -44,15 +63,12 @@ void Game::ShowMenu() const
         cout << "2. Exit Game\n";
         cout << "Select an option: ";
 
-        if (!(cin >> choice))
+        choice = GetMenuChoice();
+
+        if (choice == -1)
         {
-            cin.clear();
-            cin.ignore(10000, '\n');
-            cout << "\nInvalid input. Enter a number.\n";
             continue;
         }
-
-        cin.ignore(10000, '\n');
 
         switch (choice)
         {
@@ -83,15 +99,12 @@ void Game::ShowInvestigationMenu() const
         cout << "3. Return to Main Menu\n";
         cout << "Select an option: ";
 
-        if (!(cin >> choice))
+        choice = GetMenuChoice();
+
+        if (choice == -1)
         {
-            cin.clear();
-            cin.ignore(10000, '\n');
-            cout << "\nInvalid input. Enter a number.\n";
             continue;
         }
-
-        cin.ignore(10000, '\n');
 
         switch (choice)
         {
@@ -168,15 +181,12 @@ void Game::InvestigateSuspect() const
         cout << "6. Return to Investigation Menu\n";
         cout << "Choose a suspect: ";
 
-        if (!(cin >> choice))
+        choice = GetMenuChoice();
+
+        if (choice == -1)
         {
-            cin.clear();
-            cin.ignore(10000, '\n');
-            cout << "\nInvalid input. Enter a number.\n";
             continue;
         }
-
-        cin.ignore(10000, '\n');
 
         if (choice >= 1 && choice <= 5)
         {
@@ -208,15 +218,12 @@ void Game::InterrogateSuspect(
         cout << "4. Return to Suspect Selection\n";
         cout << "Choose a question: ";
 
-        if (!(cin >> choice))
+        choice = GetMenuChoice();
+
+        if (choice == -1)
         {
-            cin.clear();
-            cin.ignore(10000, '\n');
-            cout << "\nInvalid input. Enter a number.\n";
             continue;
         }
-
-        cin.ignore(10000, '\n');
 
         switch (choice)
         {
@@ -427,15 +434,12 @@ void Game::InvestigateEvidence() const
         cout << "7. Return to Investigation Menu\n";
         cout << "Select evidence to examine: ";
 
-        if (!(cin >> choice))
+        choice = GetMenuChoice();
+
+        if (choice == -1)
         {
-            cin.clear();
-            cin.ignore(10000, '\n');
-            cout << "\nInvalid input. Enter a number.\n";
             continue;
         }
-
-        cin.ignore(10000, '\n');
 
         if (choice >= 1 && choice <= 6)
         {
