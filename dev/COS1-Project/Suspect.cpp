@@ -1,17 +1,17 @@
 #include "Suspect.h"
 
 Suspect::Suspect()
+    : name("Unknown"),
+    occupation("Unknown"),
+    alibi("No alibi provided")
 {
-    name = "Unknown";
-    occupation = "Unknown";
-    alibi = "No alibi provided";
 }
 
 Suspect::Suspect(std::string name, std::string occupation, std::string alibi)
+    : name(name),
+    occupation(occupation),
+    alibi(alibi)
 {
-    this->name = name;
-    this->occupation = occupation;
-    this->alibi = alibi;
 }
 
 std::string Suspect::GetName() const
