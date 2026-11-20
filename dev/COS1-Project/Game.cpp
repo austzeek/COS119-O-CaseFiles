@@ -11,6 +11,11 @@ int Game::GetMenuChoice() const
 
     if (!(cin >> choice))
     {
+        if (cin.eof())
+        {
+            return 0;
+        }
+
         cin.clear();
         cin.ignore(10000, '\n');
 
@@ -65,6 +70,12 @@ void Game::ShowMenu() const
 
         choice = GetMenuChoice();
 
+        if (cin.eof())
+        {
+            cout << "\nInput ended. Exiting game.\n";
+            break;
+        }
+
         if (choice == -1)
         {
             continue;
@@ -100,6 +111,12 @@ void Game::ShowInvestigationMenu() const
         cout << "Select an option: ";
 
         choice = GetMenuChoice();
+
+        if (cin.eof())
+        {
+            cout << "\nInput ended. Returning to main menu.\n";
+            break;
+        }
 
         if (choice == -1)
         {
@@ -183,6 +200,12 @@ void Game::InvestigateSuspect() const
 
         choice = GetMenuChoice();
 
+        if (cin.eof())
+        {
+            cout << "\nInput ended. Leaving suspect selection.\n";
+            break;
+        }
+
         if (choice == -1)
         {
             continue;
@@ -219,6 +242,12 @@ void Game::InterrogateSuspect(
         cout << "Choose a question: ";
 
         choice = GetMenuChoice();
+
+        if (cin.eof())
+        {
+            cout << "\nInput ended. Leaving interrogation.\n";
+            break;
+        }
 
         if (choice == -1)
         {
@@ -435,6 +464,12 @@ void Game::InvestigateEvidence() const
         cout << "Select evidence to examine: ";
 
         choice = GetMenuChoice();
+
+        if (cin.eof())
+        {
+            cout << "\nInput ended. Leaving evidence room.\n";
+            break;
+        }
 
         if (choice == -1)
         {
